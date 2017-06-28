@@ -1,0 +1,9 @@
+--- # LOOKUP PLAYBOOK EXAMPLE
+- hosts: localhost
+  sudo: yes
+  connection: ssh
+  user: ansible
+  gather_facts: no
+  tasks:
+  - debug: msg="lookup for $HOME and $HOSTNAME {{ lookup('env','HOME HOSTNAME') }}"
+
